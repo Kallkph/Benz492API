@@ -2,16 +2,16 @@ const express = require('express');
 const  path = require('path');
 const  bodyParser = require('body-parser');
 const  cors = require('cors');
-const  mongoose = require('mongoose');
+// const  mongoose = require('mongoose');
 const  config = require('./config/DB');
 const ticketRoutes = require('./exproutes/ticket.route');
 const LoginRoutes = require('./exproutes/Login.route');
 
-mongoose.Promise = global.Promise;
-mongoose.connect(config.DB);
+// mongoose.Promise = global.Promise;
+// mongoose.connect(config.DB);
       
 const app = express();
-app.use(bodyParser.json());
+// app.use(bodyParser.json());
 app.use(cors());
 app.use('/tickets', ticketRoutes);
 app.use('/Login', LoginRoutes);
